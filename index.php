@@ -2,48 +2,48 @@
 // показывать или нет выполненные задачи
 $show_complete_tasks = rand(0, 1);
 $projects_list = [
-    "Все", "Входящие", "Учеба", "Работа", "Домашние дела", "Авто"
+        "Все", "Входящие", "Учеба", "Работа", "Домашние дела", "Авто"
 ];
 $index = 1;
 $first = 0;
 $num_count = count($projects_list);
 $tasks_list = [
-    0 => [
-        'title' => 'Собеседование в IT компании',
-        'execution_date' => '01.06.2018',
-        'category' => 'Работа',
-        'done' => 'нет'
-    ],
-    1 => [
-        'title' => 'Выполнить тестовое задание',
-        'execution_date' => '25.05.2018',
-        'category' => 'Работа',
-        'done' => 'нет'
-    ],
-    2 => [
-        'title' => 'Сделать задание первого раздела',
-        'execution_date' => '21.04.2018',
-        'category' => 'Учеба',
-        'done' => 'да'
-    ],
-    3 => [
-        'title' => 'Встреча с другом',
-        'execution_date' => '22.04.2018',
-        'category' => 'Входящие',
-        'done' => 'нет'
-    ],
-    4 => [
-        'title' => 'Купить корм для кота',
-        'execution_date' => 'нет',
-        'category' => 'Домашние дела',
-        'done' => 'нет'
-    ],
-    5 => [
-        'title' => 'Заказать пиццу',
-        'execution_date' => 'нет',
-        'category' => 'Домашние дела',
-        'done' => 'нет'
-    ]
+            0 => [
+                'title' => 'Собеседование в IT компании',
+                'execution_date' => '01.06.2018',
+                'category' => 'Работа',
+                'done' => 'нет'
+            ],
+            1 => [
+                'title' => 'Выполнить тестовое задание',
+                'execution_date' => '25.05.2018',
+                'category' => 'Работа',
+                'done' => 'нет'
+            ],
+            2 => [
+                'title' => 'Сделать задание первого раздела',
+                'execution_date' => '21.04.2018',
+                'category' => 'Учеба',
+                'done' => 'да'
+            ],
+            3 => [
+                'title' => 'Встреча с другом',
+                'execution_date' => '22.04.2018',
+                'category' => 'Входящие',
+                'done' => 'нет'
+            ],
+            4 => [
+                'title' => 'Купить корм для кота',
+                'execution_date' => 'нет',
+                'category' => 'Домашние дела',
+                'done' => 'нет'
+            ],
+            5 => [
+                'title' => 'Заказать пиццу',
+                'execution_date' => 'нет',
+                'category' => 'Домашние дела',
+                'done' => 'нет'
+            ]
 ];
 
 ?>
@@ -145,7 +145,7 @@ $tasks_list = [
                 <table class="tasks">
                     <?php foreach ($tasks_list as $key => $val): ?>
                         <tr class="tasks__item task">
-                            <?php if ($val['done']='да'): ?>
+                            <?php if ($val['done']==='да'): ?>
                             <td class="task__select task--completed">
                                 <?php else: ?>
                             <td class="task__select">
