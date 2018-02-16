@@ -147,7 +147,6 @@ function get_tasks_count($some_category, array $some_tasks_list)
 
                     <label class="checkbox">
                         <a href="/">
-
                             <?php if ($show_complete_tasks === 1): ?>
                                 <input class="checkbox__input visually-hidden" type="checkbox" checked>
                             <?php else: ?>
