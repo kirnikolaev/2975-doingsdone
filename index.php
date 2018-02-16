@@ -1,6 +1,5 @@
 <?php
 
-
 $show_complete_tasks = rand(0, 1);
 $projects_list = [
     "Все", "Входящие", "Учеба", "Работа", "Домашние дела", "Авто"
@@ -111,12 +110,12 @@ function get_tasks_count($some_category, array $some_tasks_list)
                         <?php foreach ($projects_list as $k => $category): ?>
                             <?php if ($k === 0): ?>
                                 <li class="main-navigation__list-item main-navigation__list-item--active">
-                                    <a class="main-navigation__list-item-link" href="#"><?=$category; ?></a>
+                                    <a class="main-navigation__list-item-link" href="#"><?= $category; ?></a>
                                     <span class="main-navigation__list-item-count"><?php echo get_tasks_count($category, $tasks_list); ?></span>
                                 </li>
                             <?php else: ?>
                                 <li class="main-navigation__list-item">
-                                    <a class="main-navigation__list-item-link" href="#"><?=$category; ?></a>
+                                    <a class="main-navigation__list-item-link" href="#"><?= $category; ?></a>
                                     <span class="main-navigation__list-item-count"><?php echo get_tasks_count($category, $tasks_list); ?></span>
                                 </li>
                             <?php endif; ?>
@@ -147,7 +146,6 @@ function get_tasks_count($some_category, array $some_tasks_list)
 
                     <label class="checkbox">
                         <a href="/">
-
                             <?php if ($show_complete_tasks === 1): ?>
                                 <input class="checkbox__input visually-hidden" type="checkbox" checked>
                             <?php else: ?>
